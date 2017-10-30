@@ -4,3 +4,6 @@ F8像素尺寸
 
 sublime text2快捷键
 快速转化大小写： Ctrl+K U 改为大写； Ctrl+K L 改为小写
+
+浏览器快捷键
+ctrl+f5强制刷新

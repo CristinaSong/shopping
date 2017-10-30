@@ -28,7 +28,9 @@ body{background: #fff url(../images/body_bg.png) repeat-x;}
 .top_bar .help a{color:#fff;}
 
 .top_bar .space { margin-right:12px; }
-/*.sbie6_img img { float:left; position:relative; top:10px; }*/
+
+.sbie6_img img {float:left;position:relative; top:10px; }
+/*解决ie6不认图片行高问题*/
 
 #header{width:960px; height:100px; margin:0 auto; position:relative;background:url(../images/header_bg.png) no-repeat;}
 #shopping { width:260px; height:100px; background:url(../images/shopping_bg.png) no-repeat; position:relative; }
@@ -68,14 +70,21 @@ body{background: #fff url(../images/body_bg.png) repeat-x;}
 #ad p{left:268px; bottom:7px; z-index:3; color:#fcc; font-size:13px; line-height:16px; width:630px; }
 #ad .bg{ width:940px; height:52px; background:#000; filter:alpha(opacity:80); opacity:0.8; bottom:0; left:0;z-index: 2;}
 
+#ad .next,#ad .prev{ width:75px; height:150px; margin-top:-75px; position:absolute; top:50%; z-index:6; display:none; }
+#ad .prev { background:url(../images/banner/prev.png); left:0; }
+#ad .next { background:url(../images/banner/next.png); right:0; }
+#ad .prev_bg,#ad .next_bg { position:absolute; top:0; z-index:5; width:470px; height:300px; filter:alpha(opacity:0); opacity:0; }
+#ad .prev_bg { left:0; background:yellow; }
+#ad .next_bg { right:0; background:red; }
+
 #main { width:942px; margin:0 auto;padding-top: 30px;}
 #side { width:210px; float:left; }
 #wrap { width:706px; float:right; }
 
 .module_menu{margin-bottom: 12px;}
-.module_menu h2{height: 29px;line-height:28px; text-align:center; font-size:15px; color:#fff;background:url(../images/module_menu_bg.png) repeat-x 0 -58px;margin-bottom: 1px;}
-.module_menu h2 strong{display:block;height: 29px;background:url(../images/module_menu_bg.png) no-repeat;}
-.module_menu h2 span{display:block;height:29px;background:url(../images/module_menu_bg.png) no-repeat right -29px;}
+.module_menu h2{height: 29px;line-height:28px; text-align:center; font-size:15px; color:#fff;background:url(../images/module_menu_bg.gif) repeat-x 0 -58px;margin-bottom: 1px;}
+.module_menu h2 strong{display:block;height: 29px;background:url(../images/module_menu_bg.gif) no-repeat;}
+.module_menu h2 span{display:block;height:29px;background:url(../images/module_menu_bg.gif) no-repeat right -29px;}
 
 .list{ background:url(../images/list_bg.gif) repeat-y;}
 .list ul{background:url(../images/list_bg.gif) no-repeat -210px bottom;padding: 18px 8px 15px}
@@ -93,13 +102,12 @@ body{background: #fff url(../images/body_bg.png) repeat-x;}
 .join_form .text{width:175px; height:25px; line-height:25px; background:#fff; border:1px solid #fff; border-top:1px solid #9c9c9c; border-left:1px solid #c0c0c0; margin-bottom:6px; }
 .join_form .btn{ width:88px; height:25px; border:none; font-size:15px; color:#fff; font-weight:bold; background:url(../images/shopping_bg.png) no-repeat 0 -145px; margin:0 auto; display:block;}
 
-.join_list{width:192px; margin:0 auto;background:url(../images/shopping_bg.png) no-repeat 10px -170px;}
+.join_list{width:192px; margin:0 auto;background:url(../images/shopping_bg.gif) no-repeat 10px 8px;}
 .join_list li{border-top:1px solid #fff; padding-left:62px; color:#434343; font-size:13px;}
 
 .space1 { height:45px; line-height:45px; }
 .space2 { height:38px; padding-top:5px; line-height:18px; }
-.space3 { height:45px; padding-top:5px; line-height:18px; }
-/*若不单独设置，切图白切了*/
+.space3 { height:45px; padding-top:5px; line-height:18px; }s
 
 #payment{margin: 33px 0 0 18px;}
 
@@ -120,7 +128,7 @@ body{background: #fff url(../images/body_bg.png) repeat-x;}
 .color_style{color: #b20e00;}
 
 .pic_list{width: 706px;overflow: hidden;}
-.pic_list h2{height: 56px;line-height: 62px;overflow: hidden; font-size: 18px;color: #666;}
+.pic_list h2,#scroll_list h2{height: 56px;line-height: 62px;overflow: hidden; font-size: 18px;color: #666;}
 .pic_list ul{width: 736px;}
 .pic_list li{float: left;width: 182px;height: 200px;}
 .pic_list a{display: block; width: 154px;height: 114px;border: 1px solid #c6c6c6;margin-bottom: 6px;}
@@ -133,4 +141,35 @@ body{background: #fff url(../images/body_bg.png) repeat-x;}
 .page a{display:inline-block;height: 20px;line-height: 20px; padding: 0 8px;color: #b20e00;text-indent: none; }
 .page a:hover,.page .active{color: #fff;background:#b20e00;}
 .page span{font-family: '宋体';}
+
+.scroll_wrap { height:196px; background:url(../images/scroll_bg.gif) repeat-x 0 -478px;}
+.scroll_wrap_l { height:196px; background:url(../images/scroll_bg.gif) no-repeat 0 -86px; }
+.scroll_wrap_r { height:196px; background:url(../images/scroll_bg.gif) no-repeat right -282px; position:relative; }
+ 
+.prev, .next{width: 35px;height: 43px;position: absolute;top:70px;}
+.prev{left: 0; background:url(../images/scroll_bg.gif) no-repeat;}
+.next{right: 0; background:url(../images/scroll_bg.gif) no-repeat 0 -43px;}
+
+.list_wrap{width: 615px;padding-top: 32px; margin:0 auto;overflow:hidden; position:relative;}
+.list_wrap ul{height: 150px;position:relative; left:0; }
+.list_wrap li{width: 205px;float: left;}
+.list_wrap a, .list_wrap p { width:145px; margin:0 auto; }
+.list_wrap a{display: block;height: 100px;}
+.list_wrap p{line-height:14px; padding-top:10px; font-size:12px; color:#600; text-align:center;} 
+
+#footer { height:302px; background:url(../images/footer_bg.png) repeat-x; }
+#footer_info { width:940px; height:60px; margin:0 auto; position:relative; }
+#footer_info p { height:60px; line-height:60px; color:#cbcbcb; font-size:14px; font-weight:bold; float:left; }
+#footer_info .ico1 { background:url(../images/footer_info.png) no-repeat 0 4px; text-indent:60px; margin-right:25px; }
+#footer_info .ico2 { background:url(../images/footer_info.png) no-repeat 0 -52px; text-indent:50px; }
+#footer_info .search { position:absolute; top:15px; right:-10px; }
+
+#footer_link { width:920px; margin:0 auto; overflow:hidden; padding-top:20px; }
+#footer_link dl { float:left; width:184px; }
+#footer_link dt { font-size:15px; color:#fff; font-weight:bold; line-height:50px; }
+#footer_link dd { line-height:20px; }
+#footer_link a { font-size:13px; color:#cfcfcf; }
+#footer_link span{color: #ffcc00;}
+#footer_link .space { padding-top:20px; }
+#footer_link .pos { position:relative; left:-20px; }
 
